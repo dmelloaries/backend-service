@@ -6,7 +6,7 @@ const connectDB = require("./config/database");
 const phoneRoutes = require("./routes/phoneRoutes");
 
 dotenv.config();
-
+const app = express();
 const allowedOrigins = ["http://localhost:3000"];
 
 app.use(
@@ -17,7 +17,7 @@ app.use(
     optionsSuccessStatus: 204,
   })
 );
-const app = express();
+
 const PORT = process.env.PORT || 5000;
 
 // Connect to MongoDB
